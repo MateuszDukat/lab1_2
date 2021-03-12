@@ -27,7 +27,7 @@ public class TaxCalculator implements ITaxCalculator{
                 break;
 
             default:
-                throw new IllegalArgumentException("couldn't find: " +item.getProductData().getType()+" type");
+                throw new IllegalArgumentException(item.getProductData().getType()+" not handled");
         }
 
         Money taxValue = net.multiplyBy(ratio);
